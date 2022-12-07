@@ -17,7 +17,12 @@ export const TileContainer = styled.div`
   width: 350px;
 `;
 
-export const Tile = styled.div`
+interface ITileProps {
+  mode: string;
+}
+
+export const Tile = styled.div<ITileProps>`
+  background-color: #${props => props.mode};
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +32,7 @@ export const Tile = styled.div`
   font-weight: bold;
   line-height: 3.2rem;
   text-transform: uppercase;
+  color: white
 `;
 
 export const GameSection = styled.section`

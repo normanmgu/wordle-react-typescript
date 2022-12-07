@@ -13,6 +13,7 @@ export const Main = styled.main`
 `;
 
 export const Title = styled.header`
+  margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
