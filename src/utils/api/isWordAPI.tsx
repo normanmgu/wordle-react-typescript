@@ -1,5 +1,3 @@
-import axios from "axios";
-
 const isRealWordAPI = async (queryWord: string): Promise<boolean> => {
   console.log(queryWord);
   const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${queryWord}`, { method: "GET" })

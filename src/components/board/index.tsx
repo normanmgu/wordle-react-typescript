@@ -3,7 +3,6 @@ import { GameSection, TileContainer, TileRow, Tile } from "./styles";
 
 import { BoardContext } from "../../contexts/board.context";
 import LETTERS from "../../letters";
-import isRealWordAPI from "../../utils/api/isWordAPI";
 
 const Board: React.FC = () => {
   const { board, placeLetter, deleteLetter, enterGuess, tileColors } = useContext(BoardContext);

@@ -13,7 +13,7 @@ const App: React.FC = () => {
     (async () =>{
       await createRandomWord();
     })()
-  },[])
+  },[createRandomWord])
 
   return (
     <Main>
