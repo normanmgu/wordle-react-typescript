@@ -24,16 +24,16 @@ const Keyboard: React.FC = () =>{
     <KeyboardArea>
       <KeyboardRow>
         {
-          keyboard[0].map(key => ( 
-            <Key mode={KEY_COLORS.DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
-            )
+          keyboard[0].map(key => {
+            return <Key key ={key} mode={KEY_COLORS.DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
+            }
           )
         }
       </KeyboardRow>
       <KeyboardRow>
         {
           keyboard[1].map(key =>(
-            <Key mode={KEY_COLORS.DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
+            <Key key={key} mode={KEY_COLORS.DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
             )
           )
         }
@@ -41,7 +41,7 @@ const Keyboard: React.FC = () =>{
       <KeyboardRow>
         {
           keyboard[2].map(key =>
-            <Key mode={KEY_COLORS.DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
+            <Key key={key} mode={KEY_COLORS.DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
             )
         }
       </KeyboardRow>

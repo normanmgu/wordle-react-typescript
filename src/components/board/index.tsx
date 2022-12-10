@@ -3,6 +3,7 @@ import { GameSection, TileContainer, TileRow, Tile } from "./styles";
 
 import { BoardContext } from "../../contexts/board.context";
 import LETTERS from "../../letters";
+import isRealWordAPI from "../../utils/api/isWordAPI";
 
 const Board: React.FC = () => {
   const { board, placeLetter, deleteLetter, enterGuess, tileColors } = useContext(BoardContext);
@@ -32,7 +33,7 @@ const Board: React.FC = () => {
           return (
             <TileRow key={cols}>
               {[0, 1, 2, 3, 4].map((rows) => {
-                return <Tile mode={tileColors[cols][rows]} key={rows}>{board[cols][rows]}</Tile>;
+                return <Tile key={`${cols}${rows}`} mode={tileColors[cols][rows]} >{board[cols][rows]}</Tile>;
               })}
             </TileRow>
           );
