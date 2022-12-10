@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {Main, Title } from './App.styles';
 import Board from "./components/board";
 import Keyboard from "./components/keyboard";
@@ -7,13 +7,17 @@ import { BoardProvider } from './contexts/board.context';
 import {AnswerContext} from "./contexts/answer.context";
 
 const App: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
   const {createRandomWord, reset, gameOver, answer, isWin} = useContext(AnswerContext);
 
   useEffect(()=>{
     (async () =>{
-      await createRandomWord();
+      if(!isMounted) {
+        await createRandomWord();
+        setIsMounted(true)
+      }
     })()
-  },[createRandomWord])
+  },[isMounted, createRandomWord])
 
   return (
     <Main>
