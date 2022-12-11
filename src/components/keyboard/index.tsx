@@ -2,8 +2,6 @@ import React, { useContext } from "react"
 import {Key, KeyboardRow, KeyboardArea} from "./styles"
 import { BoardContext } from "../../contexts/board.context"
 
-import KEY_COLORS from "../../utils/key.colors"
-
 const keyboard = [
   ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
   ["A", "S","D","F","G","H","J","K","L","Delete"],
