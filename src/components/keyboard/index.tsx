@@ -5,9 +5,9 @@ import { BoardContext } from "../../contexts/board.context"
 import KEY_COLORS from "../../utils/key.colors"
 
 const keyboard = [
-  ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P","Delete"],
-  ["A", "S","D","F","G","H","J","K","L","Enter"],
-  ["Z","X","C","V","B","N","M"]
+  ["Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P"],
+  ["A", "S","D","F","G","H","J","K","L","Delete"],
+  ["Z","X","C","V","B","N","M","Enter"]
 ]
 
 const Keyboard: React.FC = () =>{ 
@@ -25,7 +25,7 @@ const Keyboard: React.FC = () =>{
       <KeyboardRow>
         {
           keyboard[0].map(key => {
-            return <Key key ={key} mode={KEY_COLORS.DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
+            return <Key key ={key} mode={KEY_COLORS.LETTER_IS_HERE} onClick={() =>onClickHandler(key)}>{key}</Key>
             }
           )
         }
@@ -33,7 +33,7 @@ const Keyboard: React.FC = () =>{
       <KeyboardRow>
         {
           keyboard[1].map(key =>(
-            <Key key={key} mode={KEY_COLORS.DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
+            <Key key={key} mode={KEY_COLORS.KEY_DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
             )
           )
         }
@@ -41,7 +41,7 @@ const Keyboard: React.FC = () =>{
       <KeyboardRow>
         {
           keyboard[2].map(key =>
-            <Key key={key} mode={KEY_COLORS.DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
+            <Key key={key} mode={KEY_COLORS.KEY_DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
             )
         }
       </KeyboardRow>

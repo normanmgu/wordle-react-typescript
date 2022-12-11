@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import {Main, Title } from './App.styles';
+import {Main, Title,Button } from './App.styles';
 import Board from "./components/board";
 import Keyboard from "./components/keyboard";
 
@@ -40,7 +40,7 @@ const App: React.FC = () => {
         <Board />
         <Keyboard />
       </BoardProvider>
-      <button onClick={()=>{reset()}}>RESET: NEW WORD</button>
+      <Button onClick={()=>{reset()}}>Reset</Button>
     </Main>
   );
 }

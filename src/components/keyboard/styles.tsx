@@ -24,7 +24,7 @@ export const Key = styled.span<IKeyProps>`
 
   border: 0;
   border-radius: 4px;
-  background-color: props.mode;
+  background-color: #${props => props.mode};
   font-weight: bold;
 
 
