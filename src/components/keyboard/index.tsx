@@ -12,7 +12,7 @@ const keyboard = [
 
 const Keyboard: React.FC = () =>{ 
 
-  const { placeLetter, deleteLetter, enterGuess } = useContext(BoardContext);
+  const { placeLetter, deleteLetter, enterGuess, keyColors } = useContext(BoardContext);
 
   const onClickHandler = (key: string) =>{
     if(key === "Delete") deleteLetter();
@@ -25,7 +25,7 @@ const Keyboard: React.FC = () =>{
       <KeyboardRow>
         {
           keyboard[0].map(key => {
-            return <Key key ={key} mode={KEY_COLORS.LETTER_IS_HERE} onClick={() =>onClickHandler(key)}>{key}</Key>
+            return <Key key ={key} mode={keyColors[key]} onClick={() =>onClickHandler(key)}>{key}</Key>
             }
           )
         }
@@ -33,7 +33,7 @@ const Keyboard: React.FC = () =>{
       <KeyboardRow>
         {
           keyboard[1].map(key =>(
-            <Key key={key} mode={KEY_COLORS.KEY_DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
+            <Key key={key} mode={keyColors[key]} onClick={() =>onClickHandler(key)}>{key}</Key>
             )
           )
         }
@@ -41,7 +41,7 @@ const Keyboard: React.FC = () =>{
       <KeyboardRow>
         {
           keyboard[2].map(key =>
-            <Key key={key} mode={KEY_COLORS.KEY_DEFAULT} onClick={() =>onClickHandler(key)}>{key}</Key>
+            <Key key={key} mode={keyColors[key]} onClick={() =>onClickHandler(key)}>{key}</Key>
             )
         }
       </KeyboardRow>

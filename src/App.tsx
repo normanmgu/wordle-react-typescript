@@ -28,7 +28,7 @@ const App: React.FC = () => {
             <span>HIDDEN WORD: {answer}</span>
             <br/>
             {
-              isWin ? <span>YOU WON!</span> : <span>YOU LOST!</span>
+              isWin ? <span>YOU <b>WON</b>!</span> : <span>YOU <b>LOST</b>!</span>
             }
           </div>
         ) :
