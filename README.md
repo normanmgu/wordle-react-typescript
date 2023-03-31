@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+# Wordle Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+A simple wordle clone created using React.js and Typescript. Used the context API to manage the application states.
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- React
+- Typescript
+- CSS
+- APIs from [random-word-api](http://random-word-api.herokuapp.com/home) and [api.dictionaryapi.dev](https://dictionaryapi.dev/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Setup
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js
+- Create React App
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Running the app locally
 
-### `npm run build`
+1. Clone the repository and then install dependencies
+```sh
+git clone https://github.com/normanmgu/wordle-react-typescript.git
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Start Development Server
+```sh
+npm run dev
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Open the given localhost that the app generates for you, in my case I got http://localhost:5173/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Deployment
+The app is currently deployed on Netlify at this link: https://shiny-pithivier-22874d.netlify.app/
 
-### `npm run eject`
+### Note
+- The app is using a couple of APIs, and the limit of requests to these APIs are limited. If the app is not working, it could be because the request limit has been exceeded.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
